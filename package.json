@@ -1,0 +1,21 @@
+{
+  "name": "task-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:api": "cd ./packages/api && npm run dev",
+    "dev:client": "cd ./packages/client && npm run dev",
+    "dev": "npm-run-all --parallel dev:client dev:api",
+    "build:api": "cd ./packages/api && npm run build",
+    "build:client": "cd ./packages/client && npm run build",
+    "build": "npm-run-all --parallel build:client build:api",
+    "start": "node packages/api/dist/main"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ]
+}
